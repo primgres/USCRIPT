@@ -56,4 +56,13 @@ if %input%==7 if exist C:\Users\serhii.prymakov\Landmark\DecisionSpace\logs\ds_c
 if %input%==8 (xcopy D:\UserSessions D:\Users\serhii.prymakov\Landmark\DecisionSpace\UserSessions\ /e /q /y)
 if %input%==8 (xcopy C:\UserSessions C:\Users\serhii.prymakov\Landmark\DecisionSpace\UserSessions\ /e /q /y)
 
+if %input%==9 (@net use N:  /delete)
+if %input%==9 (@net use N: \\dsharedsg.nas.openearth.io\Landmark\apps\WIN  /persistent:yes)
+if %input%==9 (@net use O:  /delete)
+if %input%==9 (@net use O: \\dshareow.nas.openearth.io\Landmark\apps\WIN  /persistent:yes)
+if %input%==9 (@net use P:  /delete)
+if %input%==9 (@net use P: \\dshareow.nas.openearth.io\Landmark  /persistent:yes)
+if %input%==9 (@net use Y:  /delete)
+if %input%==9 (@net use Y: \\10.134.25.179\Landmark  /persistent:yes)
+
 @pause
