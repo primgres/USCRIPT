@@ -42,4 +42,7 @@ if %input%==5 if exist C:\Landmark\Baseline\LaunchDS.bat (rmdir C:\Landmark\Base
 if %input%==5 xcopy D:\Users\serhii.prymakov\Downloads\Baseline D:\Landmark\Baseline /e
 if %input%==5 xcopy C:\Users\serhii.prymakov\Downloads\Baseline C:\Landmark\Baseline /e
 
+if %input%==6 if exist D:\Users\serhii.prymakov\wallet\cwallet.sso (rmdir D:\Users\serhii.prymakov\wallet /s /q)
+if %input%==6 if exist C:\Users\serhii.prymakov\wallet\cwallet.sso (rmdir C:\Users\serhii.prymakov\wallet /s /q)
+
 @pause
