@@ -25,6 +25,12 @@ if %input%==2 if "%OW_CONF_DIR%"=="P:\QA\CONF\LSSE2E71\conf_win" (setx OW_CONF_D
 if %input%==2 if "%OW_SYSDATA_DIR%"=="D:\Landmark\OpenWorks" (setx OW_SYSDATA_DIR "O:\OpenWorks10.6")
 if %input%==2 if "%OWHOME%"=="D:\Landmark\OpenWorks" (setx OWHOME "O:\OpenWorks10.6")
 if %input%==2 if "%TNS_ADMIN%"=="P:\QA\CONF\LSSE2E71\conf_win" (setx TNS_ADMIN "P:\QA\CONF\OWE2E\conf_win")
+if %input%==2 if not defined LM_LICENSE_FILE (setx LM_LICENSE_FILE "2017@10.134.17.3;2013@10.134.19.88")
+if %input%==2 if not defined ORACLE_HOME (setx ORACLE_HOME "D:\app\client\H261885\product\12.2.0\client_1")
+if %input%==2 if not defined OW_CONF_DIR (setx OW_CONF_DIR "P:\QA\CONF\LSSE2E71\conf_win")
+if %input%==2 if not defined OW_SYSDATA_DIR (setx OW_SYSDATA_DIR "D:\Landmark\OpenWorks")
+if %input%==2 if not defined OWHOME (setx OWHOME "D:\Landmark\OpenWorks")
+if %input%==2 if not defined TNS_ADMIN (setx TNS_ADMIN "P:\QA\CONF\LSSE2E71\conf_win")
 
 if %input%==3 if "%OW_CONF_DIR%"=="P:\QA\CONF\LSSE2E71\conf_win" (setx OW_CONF_DIR "Y:\11.OWConfig\Win\OW_main")
 if %input%==3 if "%TNS_ADMIN%"=="P:\QA\CONF\LSSE2E71\conf_win" (setx TNS_ADMIN "Y:\11.OWConfig\Win\OW_main")
