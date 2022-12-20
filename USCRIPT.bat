@@ -53,4 +53,7 @@ if %input%==7 if exist D:\Users\serhii.prymakov\Landmark\DecisionSpace\logs\ds_c
 if %input%==7 if exist C:\Users\serhii.prymakov\Landmark\DecisionSpace\logs\ds_console.log (xcopy C:\Users\serhii.prymakov\Landmark\DecisionSpace\UserSessions C:\Landmark\UserSessions /s /q /y)
 if %input%==7 if exist C:\Users\serhii.prymakov\Landmark\DecisionSpace\logs\ds_console.log (rmdir C:\Users\serhii.prymakov\Landmark\DecisionSpace /s /q)
 
+if %input%==8 (xcopy D:\UserSessions D:\Users\serhii.prymakov\Landmark\DecisionSpace\UserSessions\ /e /q /y)
+if %input%==8 (xcopy C:\UserSessions C:\Users\serhii.prymakov\Landmark\DecisionSpace\UserSessions\ /e /q /y)
+
 @pause
