@@ -31,4 +31,10 @@ if %input%==3 if "%TNS_ADMIN%"=="P:\QA\CONF\LSSE2E71\conf_win" (setx TNS_ADMIN "
 if %input%==3 if "%OW_CONF_DIR%"=="Y:\11.OWConfig\Win\OW_main" (setx OW_CONF_DIR "P:\QA\CONF\LSSE2E71\conf_win" /m)
 if %input%==3 if "%TNS_ADMIN%"=="Y:\11.OWConfig\Win\OW_main" (setx TNS_ADMIN "P:\QA\CONF\LSSE2E71\conf_win" /m)
 
+if %input%==4 if exist D:\Landmark\DSG_master\LaunchDS.bat (rmdir D:\Landmark\DSG_master /s /q)
+if %input%==4 if exist C:\Landmark\DSG_master\LaunchDS.bat (rmdir C:\Landmark\DSG_master /s /q)
+if %input%==4 for /F "delims=" %%i in ('dir "N:\DSG\DSG10ep._master\" /b /ad-h /t:c /od') do set a=%%i
+if %input%==4 xcopy N:\DSG\DSG10ep._master\%a%\DSG10ep.5.3Beta D:\Landmark\DSG_master /e
+if %input%==4 xcopy N:\DSG\DSG10ep._master\%a%\DSG10ep.5.3Beta C:\Landmark\DSG_master /e
+
 @pause
