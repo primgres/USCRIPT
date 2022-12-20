@@ -45,4 +45,12 @@ if %input%==5 xcopy C:\Users\serhii.prymakov\Downloads\Baseline C:\Landmark\Base
 if %input%==6 if exist D:\Users\serhii.prymakov\wallet\cwallet.sso (rmdir D:\Users\serhii.prymakov\wallet /s /q)
 if %input%==6 if exist C:\Users\serhii.prymakov\wallet\cwallet.sso (rmdir C:\Users\serhii.prymakov\wallet /s /q)
 
+if %input%==7 (echo The following sessions will be copied into C/D:\Landmark\UserSessions:)
+if %input%==7 (dir D:\Users\serhii.prymakov\Landmark\DecisionSpace\UserSessions /b /ad)
+if %input%==7 (dir C:\Users\serhii.prymakov\Landmark\DecisionSpace\UserSessions /b /ad)
+if %input%==7 if exist D:\Users\serhii.prymakov\Landmark\DecisionSpace\logs\ds_console.log (xcopy D:\Users\serhii.prymakov\Landmark\DecisionSpace\UserSessions D:\Landmark\UserSessions /s /q /y)
+if %input%==7 if exist D:\Users\serhii.prymakov\Landmark\DecisionSpace\logs\ds_console.log (rmdir D:\Users\serhii.prymakov\Landmark\DecisionSpace /s /q)
+if %input%==7 if exist C:\Users\serhii.prymakov\Landmark\DecisionSpace\logs\ds_console.log (xcopy C:\Users\serhii.prymakov\Landmark\DecisionSpace\UserSessions C:\Landmark\UserSessions /s /q /y)
+if %input%==7 if exist C:\Users\serhii.prymakov\Landmark\DecisionSpace\logs\ds_console.log (rmdir C:\Users\serhii.prymakov\Landmark\DecisionSpace /s /q)
+
 @pause
