@@ -37,4 +37,9 @@ if %input%==4 for /F "delims=" %%i in ('dir "N:\DSG\DSG10ep._master\" /b /ad-h /
 if %input%==4 xcopy N:\DSG\DSG10ep._master\%a%\DSG10ep.5.3Beta D:\Landmark\DSG_master /e
 if %input%==4 xcopy N:\DSG\DSG10ep._master\%a%\DSG10ep.5.3Beta C:\Landmark\DSG_master /e
 
+if %input%==5 if exist D:\Landmark\Baseline\LaunchDS.bat (rmdir D:\Landmark\Baseline /s /q)
+if %input%==5 if exist C:\Landmark\Baseline\LaunchDS.bat (rmdir C:\Landmark\Baseline /s /q)
+if %input%==5 xcopy D:\Users\serhii.prymakov\Downloads\Baseline D:\Landmark\Baseline /e
+if %input%==5 xcopy C:\Users\serhii.prymakov\Downloads\Baseline C:\Landmark\Baseline /e
+
 @pause
