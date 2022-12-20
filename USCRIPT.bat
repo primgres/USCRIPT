@@ -10,6 +10,8 @@ echo 7 - delete DecisionSpace folder
 echo 8 - copy session(s) into DecisionSpace folder
 echo 9 - map drives
 
+set /p input=cmd: 
+
 if %input%==1 (set /p HALID=HALID: )
 if %input%==1 (setx OW_ORACLE_USER %HALID%)
 
