@@ -26,4 +26,9 @@ if %input%==2 if "%OW_SYSDATA_DIR%"=="D:\Landmark\OpenWorks" (setx OW_SYSDATA_DI
 if %input%==2 if "%OWHOME%"=="D:\Landmark\OpenWorks" (setx OWHOME "O:\OpenWorks10.6" /m)
 if %input%==2 if "%TNS_ADMIN%"=="P:\QA\CONF\LSSE2E71\conf_win" (setx TNS_ADMIN "P:\QA\CONF\OWE2E\conf_win" /m)
 
+if %input%==3 if "%OW_CONF_DIR%"=="P:\QA\CONF\LSSE2E71\conf_win" (setx OW_CONF_DIR "Y:\11.OWConfig\Win\OW_main" /m)
+if %input%==3 if "%TNS_ADMIN%"=="P:\QA\CONF\LSSE2E71\conf_win" (setx TNS_ADMIN "Y:\11.OWConfig\Win\OW_main" /m)
+if %input%==3 if "%OW_CONF_DIR%"=="Y:\11.OWConfig\Win\OW_main" (setx OW_CONF_DIR "P:\QA\CONF\LSSE2E71\conf_win" /m)
+if %input%==3 if "%TNS_ADMIN%"=="Y:\11.OWConfig\Win\OW_main" (setx TNS_ADMIN "P:\QA\CONF\LSSE2E71\conf_win" /m)
+
 @pause
