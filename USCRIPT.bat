@@ -62,6 +62,8 @@ if %input%==5 if exist C:\Landmark\Baseline\LaunchDS.bat (echo "Baseline copied 
 
 if %input%==6 if exist D:\Users\serhii.prymakov\wallet\cwallet.sso (rmdir D:\Users\serhii.prymakov\wallet /s /q)
 if %input%==6 if exist C:\Users\serhii.prymakov\wallet\cwallet.sso (rmdir C:\Users\serhii.prymakov\wallet /s /q)
+if %input%==6 if not exist D:\Users\serhii.prymakov\wallet\ (echo "wallet folder was removed from D:\Users\serhii.prymakov\")
+if %input%==6 if not exist C:\Users\serhii.prymakov\wallet\ (echo "wallet folder was removed from C:\Users\serhii.prymakov\")
 
 if %input%==7 (echo The following sessions will be copied into C/D:\Landmark\UserSessions:)
 if %input%==7 (dir D:\Users\serhii.prymakov\Landmark\DecisionSpace\UserSessions /b /ad)
