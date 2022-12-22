@@ -81,11 +81,15 @@ if %input%==8 if exist D:\ (dir D:\Landmark\UserSessions) else (dir C:\Landmark\
 
 if %input%==9 (@net use N:  /delete)
 if %input%==9 (@net use N: \\dsharedsg.nas.openearth.io\Landmark\apps\WIN  /persistent:yes)
+if %input%==9 if exist N:\ (echo "Drive N was successfully mapped")
 if %input%==9 (@net use O:  /delete)
 if %input%==9 (@net use O: \\dshareow.nas.openearth.io\Landmark\apps\WIN  /persistent:yes)
+if %input%==9 if exist O:\ (echo "Drive O was successfully mapped")
 if %input%==9 (@net use P:  /delete)
 if %input%==9 (@net use P: \\dshareow.nas.openearth.io\Landmark  /persistent:yes)
+if %input%==9 if exist P:\ (echo "Drive P was successfully mapped")
 if %input%==9 (@net use Y:  /delete)
 if %input%==9 (@net use Y: \\10.134.25.179\Landmark  /persistent:yes)
+if %input%==9 if exist Y:\ (echo "Drive Y was successfully mapped")
 
 @pause
