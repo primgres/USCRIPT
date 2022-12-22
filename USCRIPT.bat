@@ -38,6 +38,8 @@ if %input%==3 if "%OW_CONF_DIR%"=="P:\QA\CONF\LSSE2E71\conf_win" (setx OW_CONF_D
 if %input%==3 if "%TNS_ADMIN%"=="P:\QA\CONF\LSSE2E71\conf_win" (setx TNS_ADMIN "Y:\11.OWConfig\Win\OW_main")
 if %input%==3 if "%OW_CONF_DIR%"=="Y:\11.OWConfig\Win\OW_main" (setx OW_CONF_DIR "P:\QA\CONF\LSSE2E71\conf_win")
 if %input%==3 if "%TNS_ADMIN%"=="Y:\11.OWConfig\Win\OW_main" (setx TNS_ADMIN "P:\QA\CONF\LSSE2E71\conf_win")
+if %input%==3 if not defined OW_CONF_DIR (echo "There is no OW_CONF_DIR variable, use 2-nd action to set")
+if %input%==3 if not defined TNS_ADMIN (echo "There is no TNS_ADMIN variable, use 2-nd action to set")
 
 if %input%==4 if exist D:\Landmark\DSG_master\LaunchDS.bat (rmdir D:\Landmark\DSG_master /s /q)
 if %input%==4 if exist C:\Landmark\DSG_master\LaunchDS.bat (rmdir C:\Landmark\DSG_master /s /q)
