@@ -50,8 +50,8 @@ if %input%==4 if exist C:\Landmark\DSG_master\LaunchDS.bat (rmdir C:\Landmark\DS
 if %input%==4 for /F "delims=" %%i in ('dir "N:\DSG\DSG10ep._master\" /b /ad-h /t:c /od') do set a=%%i
 if %input%==4 xcopy N:\DSG\DSG10ep._master\%a%\DSG10ep.5.3Beta D:\Landmark\DSG_master /e
 if %input%==4 xcopy N:\DSG\DSG10ep._master\%a%\DSG10ep.5.3Beta C:\Landmark\DSG_master /e
-if %input%==4 if exist D:\Landmark\DSG_master\LaunchDS.bat (echo "Copied to D:\Landmark\DSG_master (buildid: %a%)")
-if %input%==4 if exist C:\Landmark\DSG_master\LaunchDS.bat (echo "Copied to C:\Landmark\DSG_master (buildid: %a%)")
+if %input%==4 if exist D:\Landmark\DSG_master\LaunchDS.bat (echo "Copied to D:\Landmark\DSG_master (buildID: %a%)")
+if %input%==4 if exist C:\Landmark\DSG_master\LaunchDS.bat (echo "Copied to C:\Landmark\DSG_master (buildID: %a%)")
 
 if %input%==5 if exist D:\Landmark\Baseline\LaunchDS.bat (rmdir D:\Landmark\Baseline /s /q)
 if %input%==5 if exist C:\Landmark\Baseline\LaunchDS.bat (rmdir C:\Landmark\Baseline /s /q)
