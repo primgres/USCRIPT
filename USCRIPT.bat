@@ -29,7 +29,6 @@ if %input%==2 if "%OW_SYSDATA_DIR%"=="D:\Landmark\OpenWorks" (setx OW_SYSDATA_DI
 if %input%==2 if "%OWHOME%"=="D:\Landmark\OpenWorks" (setx OWHOME "O:\OpenWorks10.6")
 if %input%==2 if "%TNS_ADMIN%"=="P:\QA\CONF\LSSE2E71\conf_win" (setx TNS_ADMIN "P:\QA\CONF\OWE2E\conf_win")
 if %input%==2 if "%TNS_ADMIN%"=="P:\QA\CONF\OWE2E\conf_win" (echo "Switched to OW6")
-
 if %input%==2 if not defined LM_LICENSE_FILE (setx LM_LICENSE_FILE "2017@10.134.17.3;2013@10.134.19.88")
 if %input%==2 if not defined ORACLE_HOME (setx ORACLE_HOME "D:\app\client\H261885\product\12.2.0\client_1")
 if %input%==2 if not defined OW_CONF_DIR (setx OW_CONF_DIR "P:\QA\CONF\LSSE2E71\conf_win")
@@ -51,6 +50,8 @@ if %input%==4 if exist C:\Landmark\DSG_master\LaunchDS.bat (rmdir C:\Landmark\DS
 if %input%==4 for /F "delims=" %%i in ('dir "N:\DSG\DSG10ep._master\" /b /ad-h /t:c /od') do set a=%%i
 if %input%==4 xcopy N:\DSG\DSG10ep._master\%a%\DSG10ep.5.3Beta D:\Landmark\DSG_master /e
 if %input%==4 xcopy N:\DSG\DSG10ep._master\%a%\DSG10ep.5.3Beta C:\Landmark\DSG_master /e
+if %input%==4 if exist D:\Landmark\DSG_master\LaunchDS.bat (echo "Copied to D:\Landmark\DSG_master (buildid: %a%)")
+if %input%==4 if exist C:\Landmark\DSG_master\LaunchDS.bat (echo "Copied to C:\Landmark\DSG_master (buildid: %a%)")
 
 if %input%==5 if exist D:\Landmark\Baseline\LaunchDS.bat (rmdir D:\Landmark\Baseline /s /q)
 if %input%==5 if exist C:\Landmark\Baseline\LaunchDS.bat (rmdir C:\Landmark\Baseline /s /q)
