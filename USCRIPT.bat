@@ -69,8 +69,7 @@ if %input%==6 if not exist C:\Users\%OEC_USERNAME%\wallet\ (echo "wallet folder 
 
 if %input%==7 if exist D:\ (echo The following sessions will be copied into D:\Landmark\UserSessions:)
 if %input%==7 if exist C:\ (echo The following sessions will be copied into C:\Landmark\UserSessions:)
-if %input%==7 (dir D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions /b /ad)
-if %input%==7 (dir C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions /b /ad)
+if %input%==7 if exist D:\ (dir D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions /b /ad) else (dir C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions /b /ad)
 if %input%==7 if exist D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\logs\ds_console.log (xcopy D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions D:\Landmark\UserSessions /s /q /y)
 if %input%==7 if exist D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\logs\ds_console.log (rmdir D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace /s /q)
 if %input%==7 if exist C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\logs\ds_console.log (xcopy C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions C:\Landmark\UserSessions /s /q /y)
