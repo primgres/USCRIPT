@@ -10,6 +10,8 @@ echo 7 - delete DecisionSpace folder
 echo 8 - copy session(s) into DecisionSpace folder
 echo 9 - map drives
 
+if not defined OEC_USERNAME (set /p login=OEC login: )
+if not defined OEC_USERNAME (setx OEC_USERNAME %login%)
 set /p input=cmd: 
 
 if %input%==1 (set /p HALID=HALID: )
@@ -55,27 +57,27 @@ if %input%==4 if exist C:\Landmark\DSG_master\LaunchDS.bat (echo "Copied to C:\L
 
 if %input%==5 if exist D:\Landmark\Baseline\LaunchDS.bat (rmdir D:\Landmark\Baseline /s /q)
 if %input%==5 if exist C:\Landmark\Baseline\LaunchDS.bat (rmdir C:\Landmark\Baseline /s /q)
-if %input%==5 xcopy D:\Users\serhii.prymakov\Downloads\Baseline D:\Landmark\Baseline /e
-if %input%==5 xcopy C:\Users\serhii.prymakov\Downloads\Baseline C:\Landmark\Baseline /e
+if %input%==5 xcopy D:\Users\%OEC_USERNAME%\Downloads\Baseline D:\Landmark\Baseline /e
+if %input%==5 xcopy C:\Users\%OEC_USERNAME%\Downloads\Baseline C:\Landmark\Baseline /e
 if %input%==5 if exist D:\Landmark\Baseline\LaunchDS.bat (echo "Baseline copied to D:\Landmark\Baseline")
 if %input%==5 if exist C:\Landmark\Baseline\LaunchDS.bat (echo "Baseline copied to C:\Landmark\Baseline")
 
-if %input%==6 if exist D:\Users\serhii.prymakov\wallet\cwallet.sso (rmdir D:\Users\serhii.prymakov\wallet /s /q)
-if %input%==6 if exist C:\Users\serhii.prymakov\wallet\cwallet.sso (rmdir C:\Users\serhii.prymakov\wallet /s /q)
-if %input%==6 if not exist D:\Users\serhii.prymakov\wallet\ (echo "wallet folder was removed from D:\Users\serhii.prymakov\")
-if %input%==6 if not exist C:\Users\serhii.prymakov\wallet\ (echo "wallet folder was removed from C:\Users\serhii.prymakov\")
+if %input%==6 if exist D:\Users\%OEC_USERNAME%\wallet\cwallet.sso (rmdir D:\Users\%OEC_USERNAME%\wallet /s /q)
+if %input%==6 if exist C:\Users\%OEC_USERNAME%\wallet\cwallet.sso (rmdir C:\Users\%OEC_USERNAME%\wallet /s /q)
+if %input%==6 if not exist D:\Users\%OEC_USERNAME%\wallet\ (echo "wallet folder was removed from D:\Users\%OEC_USERNAME%\")
+if %input%==6 if not exist C:\Users\%OEC_USERNAME%\wallet\ (echo "wallet folder was removed from C:\Users\%OEC_USERNAME%\")
 
 if %input%==7 if exist D:\ (echo The following sessions will be copied into D:\Landmark\UserSessions:)
 if %input%==7 if exist C:\ (echo The following sessions will be copied into C:\Landmark\UserSessions:)
-if %input%==7 (dir D:\Users\serhii.prymakov\Landmark\DecisionSpace\UserSessions /b /ad)
-if %input%==7 (dir C:\Users\serhii.prymakov\Landmark\DecisionSpace\UserSessions /b /ad)
-if %input%==7 if exist D:\Users\serhii.prymakov\Landmark\DecisionSpace\logs\ds_console.log (xcopy D:\Users\serhii.prymakov\Landmark\DecisionSpace\UserSessions D:\Landmark\UserSessions /s /q /y)
-if %input%==7 if exist D:\Users\serhii.prymakov\Landmark\DecisionSpace\logs\ds_console.log (rmdir D:\Users\serhii.prymakov\Landmark\DecisionSpace /s /q)
-if %input%==7 if exist C:\Users\serhii.prymakov\Landmark\DecisionSpace\logs\ds_console.log (xcopy C:\Users\serhii.prymakov\Landmark\DecisionSpace\UserSessions C:\Landmark\UserSessions /s /q /y)
-if %input%==7 if exist C:\Users\serhii.prymakov\Landmark\DecisionSpace\logs\ds_console.log (rmdir C:\Users\serhii.prymakov\Landmark\DecisionSpace /s /q)
+if %input%==7 (dir D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions /b /ad)
+if %input%==7 (dir C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions /b /ad)
+if %input%==7 if exist D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\logs\ds_console.log (xcopy D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions D:\Landmark\UserSessions /s /q /y)
+if %input%==7 if exist D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\logs\ds_console.log (rmdir D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace /s /q)
+if %input%==7 if exist C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\logs\ds_console.log (xcopy C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions C:\Landmark\UserSessions /s /q /y)
+if %input%==7 if exist C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\logs\ds_console.log (rmdir C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace /s /q)
 
-if %input%==8 if exist D:\ (xcopy D:\Landmark\UserSessions D:\Users\serhii.prymakov\Landmark\DecisionSpace\UserSessions\ /e /q /y)
-if %input%==8 (xcopy C:\Landmark\UserSessions C:\Users\serhii.prymakov\Landmark\DecisionSpace\UserSessions\ /e /q /y)
+if %input%==8 if exist D:\ (xcopy D:\Landmark\UserSessions D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions\ /e /q /y)
+if %input%==8 (xcopy C:\Landmark\UserSessions C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions\ /e /q /y)
 if %input%==8 (echo "The following sessions were copied:")
 if %input%==8 if exist D:\ (dir D:\Landmark\UserSessions) else (dir C:\Landmark\UserSessions)
 
