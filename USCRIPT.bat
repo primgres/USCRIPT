@@ -1,7 +1,7 @@
 @echo off
 echo Type the command:
 echo 1 - change HALID
-echo 2 - set required vars
+echo 2 - set required vars (OW7)
 echo 3 - cwitch to OW6 or OW7
 echo 4 - cwitch to LSSE2E or LGAUTO1 district
 echo 5 - copy the latest master build
@@ -18,12 +18,12 @@ set /p input=cmd:
 if %input%==1 (set /p HALID=HALID: )
 if %input%==1 (setx OW_ORACLE_USER %HALID%)
 
-if %input%==2 if not defined LM_LICENSE_FILE (setx LM_LICENSE_FILE "2017@10.134.17.3;2013@10.134.19.88")
-if %input%==2 if not defined ORACLE_HOME (setx ORACLE_HOME "C:\app\client\product\12.2.0\client_1")
-if %input%==2 if not defined OW_CONF_DIR (setx OW_CONF_DIR "P:\QA\CONF\LSSE2E71\conf_win")
-if %input%==2 if not defined OW_SYSDATA_DIR (setx OW_SYSDATA_DIR "C:\Landmark\OpenWorks")
-if %input%==2 if not defined OWHOME (setx OWHOME "C:\Landmark\OpenWorks")
-if %input%==2 if not defined TNS_ADMIN (setx TNS_ADMIN "P:\QA\CONF\LSSE2E71\conf_win")
+if %input%==2 setx LM_LICENSE_FILE "2017@10.134.17.3;2013@10.134.19.88"
+if %input%==2 setx ORACLE_HOME "C:\app\client\product\12.2.0\client_1"
+if %input%==2 setx OW_CONF_DIR "P:\QA\CONF\LSSE2E71\conf_win"
+if %input%==2 setx OW_SYSDATA_DIR "C:\Landmark\OpenWorks"
+if %input%==2 setx OWHOME "C:\Landmark\OpenWorks"
+if %input%==2 setx TNS_ADMIN "P:\QA\CONF\LSSE2E71\conf_win"
 
 if %input%==3 if "%LM_LICENSE_FILE%"=="2013@10.134.19.88" (setx LM_LICENSE_FILE "2017@10.134.17.3;2013@10.134.19.88")
 if %input%==3 if "%ORACLE_HOME%"=="O:\app\product\11.2.0\client_1" (setx ORACLE_HOME "C:\app\client\product\12.2.0\client_1")
