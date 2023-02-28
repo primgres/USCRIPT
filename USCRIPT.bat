@@ -54,12 +54,9 @@ if %input%==5 for /F "delims=" %%i in ('dir "N:\DSG\DSG10ep._master\" /b /ad-h /
 if %input%==5 xcopy N:\DSG\DSG10ep._master\%a%\DSG10ep.5.3Beta C:\Landmark\DSG_master /e
 if %input%==5 if exist C:\Landmark\DSG_master (echo "Copied to C:\Landmark\DSG_master (buildID: %a%)")
 
-if %input%==6 if exist D:\Landmark\Baseline\LaunchDS.bat (rmdir D:\Landmark\Baseline /s /q)
-if %input%==6 if exist C:\Landmark\Baseline\LaunchDS.bat (rmdir C:\Landmark\Baseline /s /q)
-if %input%==6 xcopy D:\Users\%OEC_USERNAME%\Downloads\Baseline D:\Landmark\Baseline /e
+if %input%==6 if exist C:\Landmark\Baseline (rmdir C:\Landmark\Baseline /s /q)
 if %input%==6 xcopy C:\Users\%OEC_USERNAME%\Downloads\Baseline C:\Landmark\Baseline /e
-if %input%==6 if exist D:\Landmark\Baseline\LaunchDS.bat (echo "Baseline copied to D:\Landmark\Baseline")
-if %input%==6 if exist C:\Landmark\Baseline\LaunchDS.bat (echo "Baseline copied to C:\Landmark\Baseline")
+if %input%==6 if exist C:\Landmark\Baseline (echo "Baseline copied to C:\Landmark\Baseline")
 
 if %input%==7 if exist D:\Users\%OEC_USERNAME%\wallet\cwallet.sso (rmdir D:\Users\%OEC_USERNAME%\wallet /s /q)
 if %input%==7 if exist C:\Users\%OEC_USERNAME%\wallet\cwallet.sso (rmdir C:\Users\%OEC_USERNAME%\wallet /s /q)
