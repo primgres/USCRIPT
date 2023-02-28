@@ -61,13 +61,10 @@ if %input%==6 if exist C:\Landmark\Baseline (echo "Baseline copied to C:\Landmar
 if %input%==7 if exist C:\Users\%OEC_USERNAME%\wallet (rmdir C:\Users\%OEC_USERNAME%\wallet /s /q)
 if %input%==7 if not exist C:\Users\%OEC_USERNAME%\wallet\ (echo "wallet folder was removed from C:\Users\%OEC_USERNAME%\")
 
-if %input%==8 if exist D:\ (echo The following sessions will be copied into D:\Landmark\UserSessions:)
 if %input%==8 if exist C:\ (echo The following sessions will be copied into C:\Landmark\UserSessions:)
-if %input%==8 if exist D:\ (dir D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions /b /ad) else (dir C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions /b /ad)
-if %input%==8 if exist D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\logs\ds_console.log (xcopy D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions D:\Landmark\UserSessions /s /q /y)
-if %input%==8 if exist D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\logs\ds_console.log (rmdir D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace /s /q)
-if %input%==8 if exist C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\logs\ds_console.log (xcopy C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions C:\Landmark\UserSessions /s /q /y)
-if %input%==8 if exist C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\logs\ds_console.log (rmdir C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace /s /q)
+if %input%==8 if exist C:\ (dir C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions /b /ad)
+if %input%==8 if exist C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace (xcopy C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions C:\Landmark\UserSessions /s /q /y)
+if %input%==8 if exist C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace (rmdir C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace /s /q)
 
 if %input%==9 if exist D:\ (xcopy D:\Landmark\UserSessions D:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions\ /e /q /y)
 if %input%==9 (xcopy C:\Landmark\UserSessions C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions\ /e /q /y)
