@@ -49,13 +49,13 @@ if %input%==4 if not defined TNS_ADMIN (echo "There is no TNS_ADMIN variable, us
 if %input%==4 if "%OW_CONF_DIR%"=="P:\QA\CONF\LSSE2E71\conf_win" if "%TNS_ADMIN%"=="P:\QA\CONF\LSSE2E71\conf_win" (echo "Switched to LGAUTO1 district")
 if %input%==4 if "%OW_CONF_DIR%"=="Y:\11.OWConfig\Win\OW_main" if "%TNS_ADMIN%"=="Y:\11.OWConfig\Win\OW_main" (echo "Switched to LSSE2E district")
 
-if %input%==5 if exist D:\Landmark\DSG_master\LaunchDS.bat (rmdir D:\Landmark\DSG_master /s /q)
-if %input%==5 if exist C:\Landmark\DSG_master\LaunchDS.bat (rmdir C:\Landmark\DSG_master /s /q)
+if %input%==5 if exist D:\Landmark\DSG_master (rmdir D:\Landmark\DSG_master /s /q)
+if %input%==5 if exist C:\Landmark\DSG_master (rmdir C:\Landmark\DSG_master /s /q)
 if %input%==5 for /F "delims=" %%i in ('dir "N:\DSG\DSG10ep._master\" /b /ad-h /t:c /od') do set a=%%i
 if %input%==5 xcopy N:\DSG\DSG10ep._master\%a%\DSG10ep.5.3Beta D:\Landmark\DSG_master /e
 if %input%==5 xcopy N:\DSG\DSG10ep._master\%a%\DSG10ep.5.3Beta C:\Landmark\DSG_master /e
-if %input%==5 if exist D:\Landmark\DSG_master\LaunchDS.bat (echo "Copied to D:\Landmark\DSG_master (buildID: %a%)")
-if %input%==5 if exist C:\Landmark\DSG_master\LaunchDS.bat (echo "Copied to C:\Landmark\DSG_master (buildID: %a%)")
+if %input%==5 if exist D:\Landmark\DSG_master (echo "Copied to D:\Landmark\DSG_master (buildID: %a%)")
+if %input%==5 if exist C:\Landmark\DSG_master (echo "Copied to C:\Landmark\DSG_master (buildID: %a%)")
 
 if %input%==6 if exist D:\Landmark\Baseline\LaunchDS.bat (rmdir D:\Landmark\Baseline /s /q)
 if %input%==6 if exist C:\Landmark\Baseline\LaunchDS.bat (rmdir C:\Landmark\Baseline /s /q)
