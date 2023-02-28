@@ -66,7 +66,7 @@ if %input%==8 if exist C:\ (dir C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\U
 if %input%==8 if exist C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace (xcopy C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions C:\Landmark\UserSessions /s /q /y)
 if %input%==8 if exist C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace (rmdir C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace /s /q)
 
-if %input%==9 xcopy C:\Landmark\UserSessions C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions\ /e /q /y
+if %input%==9 xcopy C:\Landmark\UserSessions C:\Users\%OEC_USERNAME%\Landmark\DecisionSpace\UserSessions /e /q /y
 if %input%==9 echo The following sessions were copied:
 if %input%==9 dir C:\Landmark\UserSessions
 
