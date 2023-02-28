@@ -58,9 +58,7 @@ if %input%==6 if exist C:\Landmark\Baseline (rmdir C:\Landmark\Baseline /s /q)
 if %input%==6 xcopy C:\Users\%OEC_USERNAME%\Downloads\Baseline C:\Landmark\Baseline /e
 if %input%==6 if exist C:\Landmark\Baseline (echo "Baseline copied to C:\Landmark\Baseline")
 
-if %input%==7 if exist D:\Users\%OEC_USERNAME%\wallet\cwallet.sso (rmdir D:\Users\%OEC_USERNAME%\wallet /s /q)
-if %input%==7 if exist C:\Users\%OEC_USERNAME%\wallet\cwallet.sso (rmdir C:\Users\%OEC_USERNAME%\wallet /s /q)
-if %input%==7 if not exist D:\Users\%OEC_USERNAME%\wallet\ (echo "wallet folder was removed from D:\Users\%OEC_USERNAME%\")
+if %input%==7 if exist C:\Users\%OEC_USERNAME%\wallet (rmdir C:\Users\%OEC_USERNAME%\wallet /s /q)
 if %input%==7 if not exist C:\Users\%OEC_USERNAME%\wallet\ (echo "wallet folder was removed from C:\Users\%OEC_USERNAME%\")
 
 if %input%==8 if exist D:\ (echo The following sessions will be copied into D:\Landmark\UserSessions:)
