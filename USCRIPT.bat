@@ -23,6 +23,7 @@ if %input%==2 setx ORACLE_HOME "C:\app\client\product\12.2.0\client_1"
 if %input%==2 setx OW_CONF_DIR "P:\QA\CONF\LSSE2E71\conf_win"
 if %input%==2 setx OW_SYSDATA_DIR "C:\Landmark\OpenWorks"
 if %input%==2 setx OWHOME "C:\Landmark\OpenWorks"
+if %input%==2 setx OW_HOME_DIR "%userprofile%"
 if %input%==2 setx TNS_ADMIN "P:\QA\CONF\LSSE2E71\conf_win"
 
 if %input%==3 if "%LM_LICENSE_FILE%"=="2013@10.134.19.88" (setx LM_LICENSE_FILE "2017@10.134.17.3;2013@10.134.19.88")
